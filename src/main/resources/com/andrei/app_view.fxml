@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="appBoard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClick" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.andrei.gui.AppController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="51.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/G:/AN 2 SEM 1/OOP/Java Programming IntelliJ/chessGameJavaFX/board.jpg" />
+         </image></ImageView>
+      <Label fx:id="errorLabel" layoutX="51.0" layoutY="468.0" prefHeight="18.0" prefWidth="399.0" textFill="RED" />
+      <Label fx:id="blackScore" layoutX="51.0" layoutY="31.0" prefHeight="18.0" prefWidth="211.0" text="Label" />
+      <Label fx:id="whiteScore" layoutX="51.0" layoutY="14.0" prefHeight="18.0" prefWidth="211.0" text="Label" />
+   </children>
+</AnchorPane>
