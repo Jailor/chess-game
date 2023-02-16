@@ -18,9 +18,9 @@ The game works just like a regular game of chess, with opponents taking turns to
 - Special rule: Castling/Rocadă: If the king and the rook have never moved, it’s possible to “castle,” making the rook jump over the king, and the king moving closer to the rook’s initial position in one move. This move is used to protect the king. Restrictions apply: cannot castle when in check, cannot castle into check, cannot castle if the pieces have moved, and cannot castle if there are pieces between the rook and king. The game checks for all these restrictions before completing the castling move. Otherwise, an error is shown.
 
 ## GUI and Implementation :computer: 
-![Main chessboard](piese/screenshots/Board1.png)
-![Check](https://drive.google.com/file/d/1J5jwwJjXH0_SX1QSIulJsjNiGIz8Stze/view?usp=sharing)
-![Promotion Dialogue](https://drive.google.com/file/d/1RakqwJlfIihQM8F2Ou1pi94Z-qR6aVqg/view?usp=sharing)
-![Checkmate](https://drive.google.com/file/d/1cjwuFWK32_8RvJfSDCxsJuplQrFTNt6K/view?usp=sharing)
+![Main chessboard](/piese/screenshots/Board1.PNG)
+![Check](/piese/screenshots/check.PNG)
+![Promotion Dialogue](/piese/screenshots/promotion_dialog.PNG)
+![Checkmate](/piese/screenshots/checkmate_window.PNG)
 ## Further Implementation :chart_with_upwards_trend:
 There are some niche chess features that can be implemented, such as en passant, the 50 moves rule, and threefold repetition, which require a more complex game-keeping logic like a full history of all the moves that have happened in the game.
