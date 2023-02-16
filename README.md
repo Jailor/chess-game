@@ -18,9 +18,22 @@ The game works just like a regular game of chess, with opponents taking turns to
 - Special rule: Castling/Rocadă: If the king and the rook have never moved, it’s possible to “castle,” making the rook jump over the king, and the king moving closer to the rook’s initial position in one move. This move is used to protect the king. Restrictions apply: cannot castle when in check, cannot castle into check, cannot castle if the pieces have moved, and cannot castle if there are pieces between the rook and king. The game checks for all these restrictions before completing the castling move. Otherwise, an error is shown.
 
 ## GUI and Implementation :computer: 
-![Main chessboard](/piese/screenshots/Board1.PNG)
-![Check](/piese/screenshots/check.PNG)
-![Promotion Dialogue](/piese/screenshots/promotion_dialog.PNG)
-![Checkmate](/piese/screenshots/checkmate_window.PNG)
+### OOP principles showcase
+- Inheritance: All pieces inherit from the abstract base class "Piece", achievind code reuse and a clear model structure
+- Encapsulation: Classes use private modifiers and setter/getters are provided as necessary when access is needed
+- Abstraction: The base class of Piece is an abstract class, and can be used as a common interface in order to check if a move is valid
+- Polymorphism: method overloading is done in the game class, while method overriding is used for the pieces
+### Main chessboard
+<img src="/piese/screenshots/Board1.PNG" width="400" title="Main chessboard">
+
+### Check
+ <img src="/piese/screenshots/check.PNG" width="400" title="Check">
+
+### Promotion Dialogue
+ <img src="/piese/screenshots/promotion_dialog.PNG" width="400" title="Promotion Dialogue">
+
+### Checkmate
+ <img src="/piese/screenshots/checkmate_window.PNG" width="400" title="Checkmate">
+
 ## Further Implementation :chart_with_upwards_trend:
 There are some niche chess features that can be implemented, such as en passant, the 50 moves rule, and threefold repetition, which require a more complex game-keeping logic like a full history of all the moves that have happened in the game.
