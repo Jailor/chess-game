@@ -25,21 +25,17 @@ public class King extends Piece{
      */
     @Override
     public int checkMove(ChessBoard board, Tile start, Tile end) {
-        boolean isEndPieceRook = end.getPiece()!= null && end.getPiece() instanceof Rook;
-        boolean isSameColour = end.getPiece().getColour() == this.getColour();
-        boolean piecesHaveNotMoved =  !this.hasMoved() && !end.getPiece().hasMoved();
-        boolean notInCheck = !board.isInCheck(this.getColour());
-        boolean checkPathRook = Rook.hasPathRook(board, end, start);
-        if( isEndPieceRook && isSameColour  && piecesHaveNotMoved && notInCheck)
+        if( end.getPiece()!= null && end.getPiece() instanceof Rook && end.getPiece().getColour() == this.getColour()
+                && !this.hasMoved() && !end.getPiece().hasMoved() && !board.isInCheck(this.getColour()))
         {
-            if(checkPathRook && canDoCastling(board,start,end))
+            if(Rook.hasPathRook(board, end, start) && canDoCastling(board,start,end))
             {
                 return  0;
             }
             else return 2; //not a valid Castling
         }
         //Rest of the moves
-        if(end.getPiece()!= null && isSameColour) return -1; //bad colour
+        if(end.getPiece()!= null &&  end.getPiece().getColour() != this.getColour()) return -1; //bad colour
         int dx = Math.abs(end.getX()-start.getX());
         int dy = Math.abs(end.getY()-start.getY());
         if(dx + dy == 1 || (dx ==1 && dy == 1)) return 0;
